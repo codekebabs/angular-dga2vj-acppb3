@@ -1,0 +1,12 @@
+
+<h3>Your Cart</h3>
+<a routerLink="/shipping">Shipping Costs</a>
+<div *ngIf="products[0]">
+  <div class="cart-item" *ngFor="let product of products">
+    <span>{{product.name}} {{ product.price | currency }}</span>
+    
+  </div>
+  <p>
+  <button (click)="clearCart()">Clear Cart</button>
+  </p>
+</div>
